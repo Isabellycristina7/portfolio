@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Isabelly Cristina dos Santos Moreira, estudante de Análise e Desenvolvimento de Sistemas em Brasília.">
+  <title>Isabelly Moreira | Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --paper: #f7f3fc; --paper-2: #ece4f7;
+  --ink: #2b1a4a; --muted: #6b5b86;
+  --sage: #d9ccf2; --sage-d: #8b6fd0;
+  --rose: #8a4fd6; --rose-l: #e9defa;
+  --line: rgba(43,26,74,.16);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+  --mono: "Space Mono", monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.7; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+.wrap { width: min(1100px, 90%); margin-inline: auto; }
+em { font-family: var(--serif); font-style: italic; color: var(--rose); }
+.label { font: 700 11px var(--mono); letter-spacing: 1.5px; text-transform: uppercase; color: var(--rose); }
+h2 { font: 600 clamp(32px, 4.6vw, 52px)/1.1 var(--serif); letter-spacing: -1px; margin: 12px 0 28px; }
+
+/* Menu em pílula flutuante */
+.nav { position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 50; display: flex; align-items: center; gap: 6px; max-width: 94vw; padding: 7px 8px 7px 18px; background: rgba(247,243,252,.88); backdrop-filter: blur(14px); border: 1px solid var(--line); border-radius: 999px; box-shadow: 0 8px 30px rgba(43,26,74,.08); }
+.logo { font: 700 15px var(--mono); margin-right: 10px; white-space: nowrap; }
+.logo b { color: var(--rose); }
+.links { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.links::-webkit-scrollbar { display: none; }
+.links a { font-size: 13px; font-weight: 500; padding: 8px 14px; border-radius: 999px; white-space: nowrap; color: var(--muted); transition: .2s; }
+.links a:hover { color: var(--ink); }
+.links a.active { background: var(--ink); color: var(--paper); }
+
+/* Início */
+.hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; padding: 150px 0 90px; }
+.status { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 500; padding: 7px 14px; background: var(--sage); border-radius: 999px; margin-bottom: 26px; }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: #2f9e5b; box-shadow: 0 0 0 4px rgba(47,158,91,.2); }
+.hero h1 { font: 600 clamp(58px, 10vw, 124px)/.92 var(--serif); letter-spacing: -4px; }
+.hero h1 em { display: block; font-weight: 400; }
+.role { font: 700 13px var(--mono); margin: 26px 0 14px; letter-spacing: .5px; }
+.hero p.desc { max-width: 520px; color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 999px; font-size: 14px; font-weight: 700; transition: transform .2s, background .2s; }
+.btn:hover { transform: translateY(-3px); }
+.btn-rose { background: var(--rose); color: #fff; }
+.btn-line { border: 1.5px solid var(--ink); }
+.btn-line:hover { background: var(--ink); color: var(--paper); }
+.arch-box { position: relative; }
+.arch { aspect-ratio: 4/5; border-radius: 999px 999px 28px 28px; overflow: hidden; background: linear-gradient(#e9defa, #f7f1ff); border: 1.5px solid var(--ink); box-shadow: 10px 10px 0 var(--sage-d); }
+.arch svg { width: 100%; height: 100%; display: block; }
+.chip { position: absolute; font: 700 11px var(--mono); padding: 8px 14px; border-radius: 999px; background: var(--paper); border: 1.5px solid var(--ink); }
+.chip.a { top: 14%; left: -7%; transform: rotate(-6deg); }
+.chip.b { top: 46%; right: -6%; transform: rotate(5deg); background: var(--rose-l); }
+.chip.c { bottom: 12%; left: -4%; transform: rotate(-3deg); background: var(--sage); }
+
+/* Sobre */
+.section { padding: 100px 0; }
+.about { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: start; }
+.about p { color: var(--muted); margin-bottom: 16px; }
+.quote { font: italic 400 24px/1.35 var(--serif); color: var(--ink); border-left: 3px solid var(--rose); padding-left: 20px; margin: 28px 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.chips span { font: 700 11px var(--mono); padding: 7px 13px; border-radius: 999px; background: var(--sage); }
+.trail { list-style: none; position: relative; padding: 30px; background: var(--paper-2); border-radius: 28px; border: 1px solid var(--line); }
+.trail h3 { font: 700 11px var(--mono); letter-spacing: 1.5px; text-transform: uppercase; color: var(--rose); margin-bottom: 22px; }
+.trail li { position: relative; padding: 0 0 26px 34px; }
+.trail li::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: -8px; border-left: 2px dashed var(--sage-d); }
+.trail li:last-child { padding-bottom: 0; }
+.trail li:last-child::before { display: none; }
+.trail li::after { content: ""; position: absolute; left: 0; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--sage-d); border: 3px solid var(--paper-2); box-sizing: content-box; margin: -3px; }
+.trail li.next::after { background: var(--rose); box-shadow: 0 0 0 5px var(--rose-l); }
+.trail small { display: block; font: 700 10px var(--mono); letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+.trail strong { font: 600 18px/1.3 var(--serif); }
+
+/* Habilidades */
+.skills { background: var(--paper-2); border-block: 1px solid var(--line); }
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.tile { padding: 32px 28px; border: 1.5px solid var(--ink); transition: transform .25s; }
+.tile:hover { transform: translateY(-6px) rotate(-1deg); }
+.tile:nth-child(1) { background: var(--rose-l); border-radius: 120px 120px 24px 24px; padding-top: 56px; }
+.tile:nth-child(2) { background: var(--sage); border-radius: 24px; }
+.tile:nth-child(3) { background: var(--paper); border-radius: 24px 24px 120px 120px; padding-bottom: 56px; }
+.glyph { font: 700 34px var(--mono); margin-bottom: 14px; }
+.tile h3 { font: 600 26px var(--serif); margin-bottom: 8px; }
+.tile p { font-size: 14px; color: var(--muted); }
+.tile .label { display: block; margin-top: 16px; color: var(--ink); }
+.note { text-align: center; margin-top: 34px; font: italic 400 18px var(--serif); color: var(--muted); }
+
+/* Projeto */
+.project { display: grid; grid-template-columns: 1fr 1fr; background: var(--ink); color: var(--paper); border-radius: 32px; overflow: hidden; }
+.project .info { padding: 52px 44px; align-self: center; }
+.project h3 { font: 600 clamp(28px, 3.4vw, 40px)/1.15 var(--serif); margin: 12px 0 18px; }
+.project .info p { color: #d9cdf0; font-size: 15px; margin-bottom: 14px; }
+.project .chips span { background: rgba(247,243,252,.12); color: var(--paper); border: 1px solid rgba(247,243,252,.25); }
+.stage { background: var(--sage-d); display: grid; place-items: center; padding: 40px; min-height: 380px; }
+.browser { width: 100%; max-width: 360px; background: var(--paper); border-radius: 14px; padding: 10px; transform: rotate(3deg); box-shadow: 0 24px 50px rgba(0,0,0,.28); }
+.bar { display: flex; gap: 5px; padding: 3px 3px 10px; }
+.bar i { width: 7px; height: 7px; border-radius: 50%; background: var(--rose); }
+.bar i:nth-child(2) { background: #c9b6f0; } .bar i:nth-child(3) { background: var(--sage-d); }
+.shop-hero { height: 90px; border-radius: 8px; background: var(--rose-l); padding: 16px; }
+.shop-hero div { height: 9px; border-radius: 5px; background: var(--ink); width: 60%; margin-bottom: 8px; }
+.shop-hero div + div { width: 38%; background: var(--rose); }
+.shop-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+.shop-grid div { height: 70px; border-radius: 8px; background: var(--sage); }
+.shop-grid div:nth-child(2) { background: var(--paper-2); }
+
+/* Contato */
+.contact { background: var(--sage); text-align: center; padding: 110px 0 90px; border-top: 1px solid var(--line); }
+.contact h2 { font-size: clamp(40px, 7vw, 80px); letter-spacing: -2px; }
+.contact p { max-width: 520px; margin: 0 auto; color: var(--muted); }
+.mail { display: inline-block; margin: 30px 0 26px; font: 600 clamp(20px, 3.4vw, 34px) var(--serif); border-bottom: 2px solid var(--rose); padding-bottom: 4px; word-break: break-all; }
+.mail:hover { color: var(--rose); }
+.socials { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+footer { padding: 28px 0; font-size: 12px; color: var(--muted); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s, transform .7s; }
+.reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 860px) {
+  .hero, .about, .project { grid-template-columns: 1fr; }
+  .hero { padding-top: 120px; gap: 50px; }
+  .arch-box { max-width: 380px; margin-inline: auto; width: 86%; }
+  .tiles { grid-template-columns: 1fr; }
+  .tile:nth-child(n) { border-radius: 28px; padding: 28px; }
+  .project .info { padding: 36px 26px; }
+  .stage { min-height: 300px; }
+  .section { padding: 76px 0; }
+}
+@media (max-width: 480px) {
+  .logo { display: none; }
+  .nav { padding-left: 8px; }
+  .hero h1 { letter-spacing: -2px; }
+  .chip.a { left: -2%; } .chip.b { right: -2%; } .chip.c { left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+  </style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Menu principal">
+  <a href="#inicio" class="logo">isa<b>.</b>dev</a>
+  <div class="links">
+    <a href="#inicio" class="active">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#projeto">Projeto</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
+
+<main>
+  <section id="inicio" class="wrap hero">
+    <div>
+      <span class="status"><i></i>Disponível para oportunidades</span>
+      <h1>Isabelly<em>Moreira.</em></h1>
+      <p class="role">// Estudante de Análise e Desenvolvimento de Sistemas</p>
+      <p class="desc">Tenho 20 anos, moro em Brasília e estudo na UDF. Sou motivada a construir carreira na área de tecnologia por meio do aprendizado contínuo em programação e desenvolvimento web. Busco oportunidades para expandir meus conhecimentos, enfrentar novos desafios e aperfeiçoar minhas competências técnicas.</p>
+      <div class="actions">
+        <a href="#projeto" class="btn btn-rose">Ver meu projeto <span>→</span></a>
+        <a href="#contato" class="btn btn-line">Vamos conversar</a>
+      </div>
+    </div>
+
+    <div class="arch-box">
+      <div class="arch">
+        <svg viewBox="0 0 400 500" role="img" aria-label="Ilustração de montanhas, sol e cachoeira">
+          <circle cx="285" cy="170" r="52" fill="#b388f5"/>
+          <path d="M0 340 Q100 240 200 320 T400 290 V500 H0Z" fill="#cdbcf3"/>
+          <path d="M0 400 Q120 310 240 390 T400 360 V500 H0Z" fill="#9a7be0"/>
+          <path d="M150 345 v75" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".85"/>
+          <path d="M0 458 Q150 400 300 450 T400 430 V500 H0Z" fill="#2b1a4a"/>
+          <path d="M70 440 l22 -52 l22 52z M105 444 l18 -42 l18 42z" fill="#2b1a4a"/>
+          <text x="60" y="120" font-family="Space Mono, monospace" font-weight="700" font-size="30" fill="#2b1a4a">&lt;/&gt;</text>
+        </svg>
+      </div>
+      <span class="chip a">HTML5 &amp; CSS3</span>
+      <span class="chip b">Python</span>
+      <span class="chip c">trilha &amp; cachoeira</span>
+    </div>
+  </section>
+
+  <section id="sobre" class="section wrap">
+    <div class="about">
+      <div class="reveal">
+        <span class="label">Sobre mim</span>
+        <h2>Tecnologia com os pés na <em>terra.</em></h2>
+        <p>Sou Isabelly, tenho 20 anos e estudo Análise e Desenvolvimento de Sistemas na UDF, em Brasília. Estou construindo minha trajetória acadêmica com foco em programação e desenvolvimento web.</p>
+        <p>Estou disponível para oportunidades na área de tecnologia, onde possa aprender com outros profissionais e me especializar continuamente.</p>
+        <p class="quote">Aprendizado contínuo, um passo de cada vez.</p>
+        <p>Fora da tecnologia, gosto de viver em meio à natureza. É ali que recarrego as energias para voltar com mais foco aos estudos.</p>
+        <div class="chips"><span>cachoeira</span><span>trilha</span><span>stand up paddle</span><span>camping</span></div>
+      </div>
+
+      <ol class="trail reveal">
+        <h3>Minha trilha até aqui</h3>
+        <li><small>Ponto de partida</small><strong>Ingressei em ADS na UDF</strong></li>
+        <li><small>Web</small><strong>HTML5 e CSS3: estrutura e visual das páginas</strong></li>
+        <li><small>Lógica</small><strong>Python e programação</strong></li>
+        <li><small>Em equipe</small><strong>Site de vendas de móveis</strong></li>
+        <li class="next"><small>Próxima parada</small><strong>Meu primeiro estágio em tecnologia</strong></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="habilidades" class="section skills">
+    <div class="wrap">
+      <span class="label">Tecnologias</span>
+      <h2>Minhas <em>habilidades.</em></h2>
+      <div class="tiles">
+        <article class="tile reveal">
+          <div class="glyph">&lt;5&gt;</div>
+          <h3>HTML5</h3>
+          <p>Estrutura o conteúdo de páginas web, organizando textos, imagens e elementos da interface.</p>
+          <span class="label">Desenvolvimento web</span>
+        </article>
+        <article class="tile reveal">
+          <div class="glyph">{ }</div>
+          <h3>CSS3</h3>
+          <p>Estiliza páginas web, definindo cores, layouts, fontes e a aparência dos elementos.</p>
+          <span class="label">Desenvolvimento web</span>
+        </article>
+        <article class="tile reveal">
+          <div class="glyph">py</div>
+          <h3>Python</h3>
+          <p>Linguagem versátil e de fácil aprendizado, usada em desenvolvimento web, automação, análise de dados e inteligência artificial.</p>
+          <span class="label">Programação</span>
+        </article>
+      </div>
+      <p class="note">Sempre estudando e ampliando meu conhecimento.</p>
+    </div>
+  </section>
+
+  <section id="projeto" class="section wrap">
+    <span class="label">Experiência prática</span>
+    <h2>Projeto em <em>destaque.</em></h2>
+    <article class="project reveal">
+      <div class="info">
+        <span class="label">Projeto acadêmico</span>
+        <h3>Site de Vendas de Móveis</h3>
+        <p>Projeto desenvolvido em equipe nas disciplinas de Prototipagem de Sistemas Computacionais e de Interface e Jornada do Usuário, com a criação de um site voltado para a venda de móveis.</p>
+        <p>A experiência uniu desenvolvimento web, design de interface e a visão da jornada do usuário, além do trabalho colaborativo.</p>
+        <div class="chips"><span>Web</span><span>Interface</span><span>Jornada do usuário</span><span>Trabalho em equipe</span></div>
+      </div>
+      <div class="stage">
+        <div class="browser" aria-hidden="true">
+          <div class="bar"><i></i><i></i><i></i></div>
+          <div class="shop-hero"><div></div><div></div></div>
+          <div class="shop-grid"><div></div><div></div><div></div></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="contato" class="contact">
+    <div class="wrap">
+      <span class="label">Contato</span>
+      <h2>Quer fazer parte da minha <em>próxima parada?</em></h2>
+      <p>Estou aberta a oportunidades, novos desafios e conexões com profissionais da área de tecnologia. Será um prazer conversar!</p>
+      <a class="mail" href="mailto:isamoreira0710@gmail.com">isamoreira0710@gmail.com</a>
+      <div class="socials">
+        <a class="btn btn-line" href="https://github.com/Isabellycristina7" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a class="btn btn-line" href="https://www.linkedin.com/in/isabelly-cristina-01849a3b3" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Desenvolvido por Isabelly Cristina dos Santos Moreira.</span>
+    <span>© <span id="ano"></span> Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<script>
+// Ano automático no rodapé
+document.getElementById("ano").textContent = new Date().getFullYear();
+
+// Destaque do menu conforme a seção
+const links = document.querySelectorAll(".links a");
+const sections = document.querySelectorAll("main section[id]");
+// Animação de entrada ao rolar
+const reveals = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+  const navObs = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id));
+      }
+    });
+  }, { threshold: 0.35 });
+  sections.forEach(s => navObs.observe(s));
+
+  const revObs = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); revObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => revObs.observe(r));
+} else {
+  reveals.forEach(r => r.classList.add("in"));
+}
+</script>
+</body>
+</html>
