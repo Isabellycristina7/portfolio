@@ -1,7 +1,6 @@
 # Portfólio | Isabelly Moreira
 
-[Prévia do site](<img width="1419" height="763" alt="image" src="https://github.com/user-attachments/assets/22b06492-4ece-469a-bc3f-2c7592a495e0" />
-)
+<img width="1419" height="763" alt="Prévia do site" src="https://github.com/user-attachments/assets/22b06492-4ece-469a-bc3f-2c7592a495e0" />
 
 Site pessoal criado para apresentar minha trajetória, minhas habilidades e meus projetos acadêmicos na área de tecnologia.
 
